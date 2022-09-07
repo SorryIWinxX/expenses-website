@@ -9,6 +9,7 @@ psycopg2-binary = "==2.9.3"
 gunicorn = "*"
 django-on-heroku = "*"
 django-json-response = "*"
+validate-email = "*"
 
 [dev-packages]
 
