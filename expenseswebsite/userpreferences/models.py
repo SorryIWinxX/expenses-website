@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class UserPreference(models.Model):
-    currency = models.CharField(max_length=255,blank=True, null=True)
+    currency = models.TextField(max_length=255,blank=True, null=True)
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE)
 
 
     def __str__(self):
         
-        user = models.OneToOneField(to=User, on_delete=models.CASCADE)
-        return str(user)
+        return str(self.user) + ' s' +'settings'
